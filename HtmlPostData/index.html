@@ -1,0 +1,217 @@
+{{define "form"}}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery-validation demo | Bootstrap</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="js/jquery-1.7.min.js" type="text/javascript"></script>  
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script src="js/jquery-ui-custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<form method="post" action="/process">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<div class="page-header">
+					<div class="alert alert-info" role="alert">
+						<h4>This demo shows how to integrate JQuery-validation and the Bootstrap framework.</h4>
+						<ul>
+							<li><a href="https://getbootstrap.com/" class="alert-link">Bootstrap home project</a>.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Simple Form</h3>
+					</div>
+					<div class="panel-body">
+						<form id="signupForm" method="post" class="form-horizontal" action="">
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="firstname">First name</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="lastname">Last name</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Title">Title</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Title" name="Title" placeholder="Title" />
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="TitleOfCourtesy">TitleOfCourtesy</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="TitleOfCourtesy" name="TitleOfCourtesy" placeholder="TitleOfCourtesy" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="BirthDate">BirthDate</label>
+								<div class="col-sm-5">
+									<input type="date" class="form-control" id="BirthDate" name="BirthDate" placeholder="BirthDate" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="HireDate">HireDate</label>
+								<div class="col-sm-5">
+									<input type="date" class="form-control" id="HireDate" name="HireDate" placeholder="HireDate" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Address">Address</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Address" name="Address" placeholder="Address" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="City">City</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="City" name="City" placeholder="City" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Region">Region</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Region" name="Region" placeholder="Region" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="PostalCode">PostalCode</label>
+								<div class="col-sm-5">
+									<input type="number" class="form-control" id="PostalCode" name="PostalCode" placeholder="PostalCode" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Country">Country</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Country" name="Country" placeholder="Country" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="HomePhone">HomePhone</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="HomePhone" name="HomePhone" placeholder="HomePhone" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Extension">Extension</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Extension" name="Extension" placeholder="Extension" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Photo">Photo</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Photo" name="Photo" placeholder="Photo" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="Notes">Notes</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="Notes" name="Notes" placeholder="Notes" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="ReportsTo">ReportsTo</label>
+								<div class="col-sm-5">
+									<input type="number" class="form-control" id="ReportsTo" name="ReportsTo" placeholder="ReportsTo" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label" for="ProvinceName">ProvinceName</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" id="ProvinceName" name="ProvinceName" placeholder="ProvinceName" />
+								</div>
+							</div>
+
+
+							
+
+							
+
+							<div class="form-group">
+								<div class="col-sm-5 col-sm-offset-4">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" id="agree" name="agree" value="agree" />Please agree to our policy
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-9 col-sm-offset-4">
+									<button type="submmit" class="btn btn-primary" name="signup" value="Sign up">Sign up</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+    </form>
+	
+</body>
+</html>
+{{end}}
+
+{{define "result"}}
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Show Message</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		  <script src="js/jquery-1.7.min.js" type="text/javascript"></script>  
+		  <script type="text/javascript" src="js/jquery.validate.js"></script>
+		  <script src="js/jquery-ui-custom.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+		<div class="container">
+		<div class="page-header">
+			<div class="alert alert-success" role="alert">
+				<h4 align="center">Sukses Mengirim Data</h4>
+				<ul>
+					<li align>Detail Data</a>.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="alert alert-info">
+        <label>Nama :</label> {{.firstname}} {{.lastname}}</br>
+        <label>Title :</label> {{.title}}</br>
+        <label>TitleOfCourtesy :</label> {{.TitleOfCourtesy}}</br>
+        <label>BirthDate :</label> {{.BirthDate}}</br>
+        <label>HireDate :</label> {{.HireDate}}</br>
+        <label>Address :</label> {{.Address}}</br>
+        <label>City :</label> {{.City}}</br>
+        <label>Region :</label> {{.Region}}</br>
+        <label>PostalCode :</label> {{.PostalCode}}</br>
+        <label>Country :</label> {{.Country}}</br>
+        <label>HomePhone :</label> {{.HomePhone}}</br>
+        <label>Extension :</label> {{.Extension}}</br>
+        <label>Notes :</label> {{.Notes}}</br>
+        <label>ReportsTo :</label> {{.ReportsTo}}</br>
+        <label>ProvinceName :</label> {{.ProvinceName}}</br>
+		
+	</div>
+	</div>
+    </body>
+</html>
+{{end}}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <style type="text/css" class="init">
+	
+	</style>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+    <script type="text/javascript" class="init">	
+
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+
+    </script>
+</head>
+<body>
+
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>EmployeeID</th>
+                <th>LastName</th>
+                <th>FirstName</th>
+                <th>Title</th>
+                <th>TitleOfCourtesy</th>
+                <th>BirthDate</th>
+                <th>HireDate</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Region</th>
+                <th>PostalCode</th>
+                <th>HomePhone</th>
+                <th>Extension</th>
+                <th>Photo</th>
+                <th>Notes</th>
+                <th>ReportsTo</th>
+                <th>ProvinceName</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range . }}
+            <tr>
+                <td>{{ .EmployeeID }}</td>
+                <td>{{ .LastName }}</td>
+                <td>{{ .FirstName }}</td>
+                <td>{{ .Title }}</td>
+                <td>{{ .TitleOfCourtesy }}</td>
+                <td>{{ .BirthDate }}</td>
+                <td>{{ .HireDate }}</td>
+                <td>{{ .Address }}</td>
+                <td>{{ .City }}</td>
+                <td>{{ .Region }}</td>
+                <td>{{ .PostalCode }}</td>
+                <td>{{ .Country }}</td>
+                <td>{{ .HomePhone }}</td>
+                <td>{{ .Extension }}</td>
+                <td>{{ .Photo }}</td>
+                <td>{{ .Notes }}</td>
+                <td>{{ .ReportsTo }}</td>
+                <td>{{ .ProvinceName }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>EmployeeID</th>
+                <th>LastName</th>
+                <th>FirstName</th>
+                <th>Title</th>
+                <th>TitleOfCourtesy</th>
+                <th>BirthDate</th>
+                <th>HireDate</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Region</th>
+                <th>PostalCode</th>
+                <th>HomePhone</th>
+                <th>Extension</th>
+                <th>Photo</th>
+                <th>Notes</th>
+                <th>ReportsTo</th>
+                <th>ProvinceName</th>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
